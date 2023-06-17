@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/boton flotante whatspa.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Dubo :)  Desarrollador Web</title>
 </head>
 
 <body>
+    <a href="https://wa.link/57y492" id="whatsapp-btn" class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
     <!-- SECCION I N I C I O -->
     <section id="inicio">
         <div class="contenido">
@@ -44,8 +48,8 @@
                 </div>
             </header>
             <div class="presentacion">
-                <p class="bienvenida">Bienvenidos</p>
-                <h2>Soy <span data-aos="fade-right" data-aos-duration="3000">Jack Inga</span>, Desarrollador Web</h2>
+                <p class="bienvenida animate__animated animate__bounce">Bienvenidos</p>
+                <h2>Soy <span class="animate__animated animate__bounce">Jack Inga</span>, Desarrollador Web</h2>
                 <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, </p>
                 <a class="animate__backInRight" href="#portfolio" data-aos="fade-down"  data-aos-easing="ease-in-sine" data-aos-duration="1500" >Ir a Portafolio</a>
             </div>
@@ -191,10 +195,10 @@
     </div>
 
     <!-- SECCION PORTAFOLIO -->
-    <section id="portfolio">
+    <section id="portfolio"  data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-once="true">
         <h3 class="titulo-seccion">Mis Proyectos</h3>
         <div class="fila">
-            <div class="proyecto">
+            <div class="proyecto" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out"  >
                 <div class="overlay"></div>
                 <img src="img/proyecto1.png" alt="">
                 <div class="info">
@@ -202,7 +206,7 @@
                    <a   class="link__color_none" href="https://temp4tocoarjunin.netlify.app/" target="_blank"><p>Ir a la pagina</p></a> 
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="100" data-aos-delay="500" data-aos-mirror="true">
                 <div class="overlay"></div>
                 <img src="img/proyecto2.PNG" alt="">
                 <div class="info">
@@ -210,7 +214,7 @@
                     <a  class="link__color_none" href="https://coinna.netlify.app/" target="_blank"><p>Visita la pagina COINÑA</p></a> 
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto"  data-aos="flip-left" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-mirror="true">
                 <div class="overlay"></div>
                 <img src="img/proyecto3.png" alt="">
                 <div class="info">
@@ -220,7 +224,7 @@
             </div>
         </div>
         <div class="fila">
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in-out">
                 <div class="overlay"></div>
                 <img src="img/proyecto4.png" alt="">
                 <div class="info">
@@ -228,7 +232,7 @@
                    <a class="link__color_none" href="https://to-do-list980.netlify.app/" target="_blank"><p>Visita la pagina de todo list</p></a> 
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-in-out">
                 <div class="overlay"></div>
                 <img src="img/proyecto5.png" alt="">
                 <div class="info">
@@ -236,38 +240,39 @@
                    <a class="link__color_none" href="https://primer-proyecto-web-2.netlify.app/" target="_blank"><p>Visita mi pagina</p></a> 
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" data-aos-easing="ease-out" data-aos-anchor-placement="top-bottom" data-aos-stagger="200">
                 <div class="overlay"></div>
                 <img src="img/proyecto6.png" alt="">
                 <div class="info">
                     <h4>Esto es una web de blog de café.</h4>
-                  <a class="link__color_none" href="https://blog-de-cafe980.netlify.app/" target="_blank"><p>Web de un blog de cafe</p></a>  
+                  <a class="link__color_none" href="https://blog-de-cafe980.netlify.app/" target="_blank"><p>visita la Web de un blog de cafe</p></a>  
                 </div>
             </div>
         </div>
         <div class="fila">
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-out-right">
                 <div class="overlay"></div>
-                <img src="img/proyecto7.jpg" alt="">
+                <img src="img/proyecto7.png" alt="">
                 <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                    <h4>El proyecto es una web de un colegio en donde se tuvo que que solucionar una problematica que era que el director no tenia muchos estudiantes.</h4>
+                    <a class="link__color_none" href="https://regal-capybara-dbe237.netlify.app/" target="_blank"><p> Visita la Web de un colegio de cusco</p></a>
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-out-left">
                 <div class="overlay"></div>
-                <img src="img/proyecto8.jpg" alt="">
+                <img src="img/proyecto8.png" alt="">
                 <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                    <h4>Web de  una tienda viertual en donde se vende ropa para DEVS. </h4>
+                    <a class="link__color_none" href="https://segundo-sitio-web-3.netlify.app/" target="_blank"><p> visita mi sitio que desarrolle</p></a>
+                
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="fade-up" data-aos-duration="3000">
                 <div class="overlay"></div>
-                <img src="img/proyecto9.jpg" alt="">
+                <img src="img/proyecto9.png" alt="">
                 <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                    <h4>esto es una web que solo muestra texto de mi colegio un mensaje. </h4>
+                    <a class="link__color_none" href="https://regal-capybara-dbe237.netlify.app/" target="_blank"><p>visita la web  en donde esta un mensaje.</p></a>
                 </div>
             </div>
         </div>
@@ -286,7 +291,7 @@
                     <input type="text" placeholder="Tema..." class="input-full">
                 </div>
                 <div class="fila">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full predeterminado__textarea"></textarea>
                 </div>
 
                 <input type="submit" value="Enviar Mensaje" class="btn-enviar">
@@ -305,7 +310,8 @@
 
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/flotante ehatsap.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
