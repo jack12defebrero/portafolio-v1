@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/boton flotante whatspa.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/switch-cambio.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Dubo :)  Desarrollador Web</title>
 </head>
@@ -31,6 +32,26 @@
                             <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
                             <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
                             <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+
+                            <li class="switch__li">
+                                <label for="switch" class="theme" id="switch">
+                                    <span class="theme__toggle-wrap">
+                                        <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                                        <span class="theme__fill"></span>
+                                        <span class="theme__icon">
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                            <span class="theme__icon-part"></span>
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
                         </ul>
                     </nav>
 
@@ -47,6 +68,7 @@
                     </div>
                 </div>
             </header>
+            
             <div class="presentacion">
                 <p class="bienvenida animate__animated animate__bounce">Bienvenidos</p>
                 <h2>Soy <span class="animate__animated animate__bounce">Jack Inga</span>, Desarrollador Web</h2>
@@ -313,6 +335,8 @@
     <script src="js/script.js"></script>
     <script src="js/flotante ehatsap.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Cmabio de dark y light.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         AOS.init({

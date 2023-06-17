@@ -28,12 +28,16 @@
         /* *********************/
         /* seccion I N I C I O */
         /* *********************/
+        .switch__li {
+            padding: 19px;
+        }
         .bienvenida {
             animation: bounce infinite;
             -webkit-animation: bounce infinite;
             color:  rgb(255, 255, 255);
             font-weight: bold;
         }
+
     
         @keyframes bounce {
             0%, 100% {
