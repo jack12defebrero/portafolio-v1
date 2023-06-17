@@ -40,7 +40,7 @@ document.querySelector('#whatsapp-btn').addEventListener('click', function (even
       return new Promise((resolve) => {
         Swal.showLoading();
         setTimeout(() => {
-          window.open('https://wa.link/ab5bo7');
+          window.open('https://wa.link/57y492');
           resolve();
         }, 2000);
       });
