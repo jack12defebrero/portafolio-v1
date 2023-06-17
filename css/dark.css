@@ -1,0 +1,27 @@
+:root {
+--color1:  #000000 ;
+--color2:  #222222 ;
+--color3:  #444444 ;
+--color4:  #656565;
+--color5:  #878787 ;
+}
+
+
+.dark  {
+    background-color: black;
+}
+.dark  .bienvenida{
+    color: black;
+}
+
+.dark #sobremi .sobremi p {
+    color: white;
+    font-weight: 500;
+}
+
+.dark  #sobremi .sobremi h2  {
+    color: azure;
+}
+.dark #sobremi .sobremi h3 {
+    color:white;
+}
