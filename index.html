@@ -34,25 +34,14 @@
                             <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
                             <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
 
-                            <li class="switch__li">
-                                <label for="switch" class="theme" id="switch">
-                                    <span class="theme__toggle-wrap">
-                                        <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
-                                        <span class="theme__fill"></span>
-                                        <span class="theme__icon">
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                            <span class="theme__icon-part"></span>
-                                        </span>
-                                    </span>
+                            
+                                <label id="fondo__switch" class="switch" for="switch">
+                                    <input type="checkbox" id="switch">
+                                    <span class="slider"></span>
+                                    <span class="slider-icon"><i class='bx bx-moon'></i><i class='bx bx-sun'></i></span>
                                 </label>
-                            </li>
+                            
+
                         </ul>
                     </nav>
 
@@ -318,7 +307,7 @@
 
     <!-- SECCION FOOTER -->
     <footer>
-        <p>Todos los derechos reservados - 2022</p>
+        <p>Todos los derechos reservados - 2023</p>
         <div class="redes">
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -338,6 +327,25 @@
             easing: 'ease-out-back',
             duration: 1000
         });
+    </script>
+
+    <script>
+        const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 5000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'Bienvenido ingreso al portafolio de Jack'
+})
     </script>
 </body>
 

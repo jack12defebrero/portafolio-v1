@@ -4,6 +4,7 @@
 --color3:  #444444 ;
 --color4:  #656565;
 --color5:  #878787 ;
+--color6: #fd4f80;
 }
 
 
@@ -24,4 +25,63 @@
 }
 .dark #sobremi .sobremi h3 {
     color:white;
+}
+.dark #sobremi .contenedor-foto img {
+    box-shadow: 10px 10px 46px 13px rgba(254, 250, 250, 0.75);
+}
+.dark #sobremi .sobremi a{
+    color: #fdfdfd;
+    border-radius: 30px;
+            border: 4px solid #ffffff;
+            cursor: pointer;
+}
+.dark #servicios {
+    background-color:  var(--color1);
+}
+
+.dark #servicios {
+    background-color: #222222;
+}
+
+.dark #servicios .titulo-seccion {
+    color: white;
+}
+.dark #servicios .fila .servicio {
+    border: solid 6px var(--color6);
+    background-color: var(--color5);
+    color: rgb(0, 0, 0);
+}
+
+.dark #servicios .fila .servicio:hover {
+    box-shadow: 5px 5px 10px #fdfdfd, -5px -5px 10px var(--color6);
+}
+
+.dark .contenedor-skills {
+    background: linear-gradient(#515356cc, rgba(33, 16, 16, 0.8)), url("../img/fondo\ 2\ dark.png");
+}
+.dark #portfolio, .contenedor-skills, #sobremi, #inicio, #servicios{
+    border-bottom: solid 6px rgb(255, 255, 255);
+}
+.dark #portfolio {
+    background-color: #444444;
+}
+.dark #portfolio .titulo-seccion {
+    color: #fdfdfd;
+}
+.dark #portfolio .fila .proyecto {
+    border: 9px solid var(--color6);
+}
+
+.dark #portfolio .fila .proyecto img {
+    filter: saturate(2);
+    -webkit-filter: saturate(2);
+}
+
+.dark #contacto {
+    background-color: var(--color2);
+}
+
+.dark #contacto .titulo-seccion{
+    color: #fdfdfd;
+    border-bottom:  3px white;
 }

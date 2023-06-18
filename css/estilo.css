@@ -24,7 +24,6 @@
         html {
             scroll-behavior: smooth;
         }
-
         /* *********************/
         /* seccion I N I C I O */
         /* *********************/
@@ -53,7 +52,7 @@
         }
 
         #inicio {
-            background: linear-gradient( var(--color-3), rgba(0, 0, 0, 0.639)), url("../img/fondo-inicio.jpg");
+            background: linear-gradient( var(--color-3), rgba(0, 0, 0, 0.639)), url("https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg");
             background-size: cover;
             background-position: center center;
             height: 100vh;
@@ -61,7 +60,7 @@
         }
 
         #inicio .contenido header {
-            background-color: rgba(0, 0, 0, .8);
+            background-color: rgba(0, 0, 0, 0.8);
             position: fixed;
             width: 100%;
             z-index: 100;
@@ -448,7 +447,7 @@
         /* *********************/
 
         #portfolio {
-            max-width: 1100px;
+            max-width: unset;
             padding: 100px 0;
             margin: auto;
             border-bottom: solid 6px black;
@@ -491,6 +490,7 @@
             filter: grayscale(1);
             object-fit: cover;
             transition: .5s;
+            cursor: pointer;
         }
 
         #portfolio .fila .proyecto:hover img {
@@ -526,6 +526,7 @@
 
         #contacto .titulo-seccion {
             margin-bottom: 20px;
+            text-decoration: 3px solid white;
         }
 
         #contacto .contenedor-form {
