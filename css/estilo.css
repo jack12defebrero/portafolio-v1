@@ -6,7 +6,21 @@
             box-sizing: border-box;
             font-family: 'Montserrat';
         }
+        a {
+            text-decoration: none;
+        }
 
+        .dubo__inicio {
+           transition: 0.5s;
+           -webkit-transition: 0.5s;
+           -moz-transition: 0.5s;
+           -ms-transition: 0.5s;
+           -o-transition: 0.5s;
+}
+
+        .dubo__inicio:hover {
+            border-bottom: 4px solid white ;
+        }
         :root {
             --color-rosa-titulo-demas: #ff5080;
             --color-1: #000000;
@@ -97,6 +111,7 @@
 
         #inicio .contenido header .contenido-header nav ul li a:hover {
             color: #ff5080;
+            border-bottom: 4px solid #ff5080;
         }
 
         #inicio .contenido header .contenido-header .redes a {
