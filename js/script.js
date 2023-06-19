@@ -161,18 +161,18 @@ document.addEventListener('keydown', function (event) {
   
   
   
-  //Bloqueo del anticlick del raton o touchpad
-  //document.addEventListener("contextmenu", function (event) {
-   // event.preventDefault();
-  //  Swal.fire({
-  //    icon: 'warning',
-   //   title: 'Oops...',
-   //   text: 'El botón derecho del ratón está deshabilitado.',
-  //    confirmButtonColor: '#d33',
-  //    confirmButtonText: 'Está bien',
-  //    allowOutsideClick: false,
-  //  });
-  //});
+//Bloqueo del anticlick del raton o touchpad
+document.addEventListener("contextmenu", function (event) {
+   event.preventDefault();
+  Swal.fire({
+    icon: 'warning',
+     title: 'Oops...',
+     text: 'El botón derecho del ratón está deshabilitado.',
+     confirmButtonColor: '#d33',
+    confirmButtonText: 'Está bien',
+     allowOutsideClick: false,
+  });
+});
   
   
   // Bloquear las teclas "Ctrl + R"
