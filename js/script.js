@@ -162,17 +162,17 @@ document.addEventListener('keydown', function (event) {
   
   
 //Bloqueo del anticlick del raton o touchpad
-document.addEventListener("contextmenu", function (event) {
-   event.preventDefault();
-  Swal.fire({
-    icon: 'warning',
-     title: 'Oops...',
-     text: 'El botón derecho del ratón está deshabilitado.',
+//document.addEventListener("contextmenu", function (event) {
+ //  event.preventDefault();
+ // Swal.fire({
+ //   icon: 'warning',
+ //    title: 'Oops...',
+ //    text: 'El botón derecho del ratón está deshabilitado.',
      confirmButtonColor: '#d33',
-    confirmButtonText: 'Está bien',
-     allowOutsideClick: false,
-  });
-});
+ //   confirmButtonText: 'Está bien',
+  //   allowOutsideClick: false,
+//  });
+//});
   
   
   // Bloquear las teclas "Ctrl + R"
@@ -192,7 +192,6 @@ document.addEventListener("contextmenu", function (event) {
     }
   });
   
-  
   //Bloqueo del ctrl + c 
   document.addEventListener("keydown", function (event) {
     if (event.ctrlKey && event.key === "c") {
@@ -207,4 +206,99 @@ document.addEventListener("contextmenu", function (event) {
     }
   });
 
+
+
+  // validacion del formulario:  siuuuuuu 
+// Selecciona el formulario por su ID
+const $form = document.querySelector('#form');
+
+// Agrega un event listener al formulario que se ejecuta cuando se dispara el evento "submit"
+$form.addEventListener('submit', handleSubmit);
+
+// Función que se ejecuta cuando el formulario es enviado
+async function handleSubmit(event) {
+  // Detiene la acción predeterminada del formulario (enviar y recargar la página)
+  event.preventDefault();
+
+  // Obtiene los valores de los campos del formulario
+  const name = document.querySelector('#nombre').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const message = document.querySelector('#message1').value.trim();
+
+  // Verifica si alguno de los campos está vacío
+  if (!name || !email || !message) {
+    // Si algún campo está vacío, muestra una alerta y detiene el envío del formulario
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops... todos los datos deben estar rellenados',
+      text: 'Complete  los datos requeridos',
+      backdrop: 'rgba(0,0,0,0.6)',
+      confirmButtonText: 'esta bien :(',
+
+      allowOutsideClick: false,
+    });
+
+    return;
+  }
+
+  // Validar que el email tenga un formato válido
+  const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!email.match(emailFormat)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...EL CORREO ELECTRONICO QUE INGRESO NO ES VALIDO',
+      text: 'Por favor ingresa un correo electronico valido',
+      backdrop: 'rgba(0,0,0,0.6)',
+      confirmButtonText: 'esta bien :(',
+      allowOutsideClick: false,
+    });
+    return;
+  }
+
+  // Crea una nueva instancia del formulario con todos los datos del formulario
+  const form = new FormData(this);
+
+  // Envía el formulario mediante una petición HTTP utilizando "fetch"
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+      'accept': 'application/json'
+    }
+  });
+
+  // Si la respuesta de la petición es exitosa
+  if (response.ok) {
+    // Restablece el formulario
+    this.reset();
+
+    // Muestra una alerta de éxito personalizada utilizando SweetAlert2
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Su mensaje fue enviado correctamente, nos estaremos poniendo en contacto con ústed.',
+      showConfirmButton: false,
+      text: 'Modal with a custom image.',
+      backdrop: 'rgba(46, 252, 5, 0.295) ',
+      html: 'Esta alerta se cerrará automáticamente en estos instantes <b></b>.',
+      timer: 5000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const b = Swal.getHtmlContainer().querySelector('b');
+        timerInterval = setInterval(() => {
+          b.textContent = Swal.getTimerLeft();
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer');
+      }
+    });
+  }
+}
   

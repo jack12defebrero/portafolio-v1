@@ -290,19 +290,20 @@
     <section id="contacto">
         <h3 class="titulo-seccion">Contactanos ahora</h3>
         <div class="contenedor-form">
-            <form action="">
+            <form id="form" action="https://formspree.io/f/xyyarqda"  method="POST"
+            onsubmit="return onSubmit()">
                 <div class="fila mitad">
-                    <input type="text" placeholder="Nombre Completo *" class="input-mitad">
-                    <input type="email" placeholder="Dirección de Email" class="input-mitad">
+                    <input type="text" id="nombre" placeholder="Nombre Completo *" class="input-mitad">
+                    <input  id="email" placeholder="Dirección de Email" class="input-mitad" name="email">
                 </div>
                 <div class="fila">
-                    <input type="text" placeholder="Tema..." class="input-full">
+                    <input  name="message" type="text"  id="nombre" placeholder="Tema..." class="input-full">
                 </div>
                 <div class="fila">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full predeterminado__textarea"></textarea>
+                    <textarea name="message"  id="message1" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full predeterminado__textarea"></textarea>
                 </div>
 
-                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+                <input  id="submit" type="submit" value="Enviar Mensaje" class="btn-enviar">
             </form>
         </div>
     </section>
@@ -311,9 +312,9 @@
     <footer>
         <p>Todos los derechos reservados - 2023</p>
         <div class="redes">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://www.facebook.com/jack.inganaupa.5?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/inganaupajack?igshid=NGExMmI2YTkyZg==" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://github.com/jack12defebrero" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
 
     </footer>
